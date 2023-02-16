@@ -15,6 +15,6 @@ Size of a float: %u bytes",
 		   sizeof(int),
 		   sizeof(long int),
 		   sizeof(long long int),
-		   sizeof(float))
+		   sizeof(float));
 	return (0);
 }
