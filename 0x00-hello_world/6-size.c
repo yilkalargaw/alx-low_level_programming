@@ -10,7 +10,7 @@ int main(void)
 Size of an int: %u byte(s)\n\
 Size of a long int: %u byte(s)\n\
 Size of a long long int: %u byte(s)\n\
-Size of a float: %u byte(s)",
+Size of a float: %u byte(s)\n",
 		   sizeof(char),
 		   sizeof(int),
 		   sizeof(long int),
