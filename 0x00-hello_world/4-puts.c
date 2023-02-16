@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- * main: puts out something
- * return zero
+ * main - is the place we are putting to stdout
+ *
+ * Return: returns 0
  */
 int main(void)
 {
