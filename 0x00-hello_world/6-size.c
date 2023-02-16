@@ -6,11 +6,11 @@
  */
 int main(void)
 {
-	printf("Size of a char: %u bytes\n\
-Size of an int: %u bytes\n\
-Size of a long int: %u bytes\n\
-Size of a long long int: %u bytes\n\
-Size of a float: %u bytes",
+	printf("Size of a char: %u byte(s)\n\
+Size of an int: %u byte(s)\n\
+Size of a long int: %u byte(s)\n\
+Size of a long long int: %u byte(s)\n\
+Size of a float: %u byte(s)",
 		   sizeof(char),
 		   sizeof(int),
 		   sizeof(long int),
