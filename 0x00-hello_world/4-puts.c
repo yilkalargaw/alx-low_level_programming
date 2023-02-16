@@ -1,6 +1,6 @@
 #include <stdio.h>
-/*
- * main.c put out something
+/**
+ * main puts out something
  * returns zero
  */
 int main(void)
