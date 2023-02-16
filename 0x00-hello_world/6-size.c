@@ -6,11 +6,11 @@
  */
 int main(void)
 {
-	printf("%s\n%s\n%s\n%s\n%s\n",
-		   sprintf("Size of a char: %u byte(s)", sizeof(char)),
-		   sprintf("Size of a int: %u byte(s)", sizeof(int)),
-		   sprintf("Size of a long int: %u byte(s)", sizeof(long int)),
-		   sprintf("Size of a long long int: %u byte(s)", sizeof(long long int)),
-		   sprintf("Size of a float: %u byte(s)", sizeof(float)));
+	printf("%s%lu%s\n%s%lu%s\n%s%lu%s\n%s%lu%s\n%s%lu%s\n",
+		   "Size of a char: ", sizeof(char), "byte(s)",
+		   "Size of a int: ", sizeof(int), "byte(s)",
+		   "Size of a long int: ", sizeof(long int), "byte(s)",
+		   "Size of a long long int: ", sizeof(long long int), "byte(s)",
+		   "Size of a float: ", sizeof(float), "byte(s)");
 	return (0);
 }
