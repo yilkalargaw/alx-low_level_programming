@@ -27,7 +27,7 @@ int main(void)
 			putchar('0' + y);
 			putchar('0' + z);
 
-			if (!(w == 8 && x == 9 && y==9 && z==9))
+			if (!(w == 8 && x == 9 && y == 9 && z == 9))
 			{
 				putchar(',');
 				putchar(' ');
