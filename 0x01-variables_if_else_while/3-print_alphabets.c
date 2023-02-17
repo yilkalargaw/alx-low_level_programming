@@ -5,10 +5,11 @@
  * Return: returns 0
  */
 int main () {
-   for(char ch = 'a' ; ch <= 'z' ; ch++)
+	char ch = 0;
+   for(ch = 'a' ; ch <= 'z' ; ch++)
 	  putchar(ch);
 
-   for(char ch = 'A' ; ch <= 'Z' ; ch++)
+   for(ch = 'A' ; ch <= 'Z' ; ch++)
 	  putchar(ch);
 
    putchar(10);
