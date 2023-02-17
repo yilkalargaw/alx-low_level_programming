@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	unsigned int i=0;
+	unsigned int i = 0;
 
 	for (i = 0; i <= 15; i++)
 		putchar("0123456789abcdef"[i]);
