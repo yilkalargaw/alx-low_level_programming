@@ -4,12 +4,14 @@
  *
  * Return: returns 0
  */
-int main () {
+int main ()
+{
 	char ch=0;
-   for(ch = 'z' ; ch >= 'a' ; ch--)
-	  putchar(ch);
 
-   putchar(10);
+	for(ch = 'z' ; ch >= 'a' ; ch--)
+		putchar(ch);
 
-   return(0);
+	putchar(10);
+
+	return(0);
 }
