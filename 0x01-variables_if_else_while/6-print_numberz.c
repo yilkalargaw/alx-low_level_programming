@@ -4,12 +4,14 @@
  *
  * Return: returns 0
  */
-int main () {
+int main(void)
+{
 	unsigned int i=0;
-   for(i = '0' ; i <= '9' ; i++)
-	  putchar(i);
 
-   putchar(10);
+	for(i = '0' ; i <= '9' ; i++)
+		putchar(i);
 
-   return(0);
+	putchar(10);
+
+	return (0);
 }

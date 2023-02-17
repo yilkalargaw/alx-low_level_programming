@@ -11,5 +11,5 @@ int main(void)
 	for (i = 0; i <= 15; i++)
 		putchar("0123456789ABCDEF"[i]);
 
-	return(0);
+	return (0);
 }
