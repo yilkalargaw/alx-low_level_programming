@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	unsigned int i=0;
+	unsigned int i = 0;
 
 	for (i = 0; i < 10; i++)
 	{
@@ -17,6 +17,8 @@ int main(void)
 			putchar(' ');
 		}
 	}
+
+	putchar(10);
 
 	return (0);
 }
