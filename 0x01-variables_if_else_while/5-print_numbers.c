@@ -4,12 +4,13 @@
  *
  * Return: returns 0
  */
-int main () {
-	unsigned int i=0;
-   for(i = 0 ; i < 10 ; i++)
-	   printf("%i", i);
+int main(void)
+{
+	unsigned int i = 0;
+	for (i = 0 ; i < 10 ; i++)
+		printf("%i", i);
 
-   putchar(10);
+	putchar(10);
 
-   return(0);
+	return (0);
 }
