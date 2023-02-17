@@ -4,7 +4,8 @@
  *
  * Return: returns 0
  */
-int main(void) {
+int main(void)
+{
 	char ch = 0;
 	for(ch = 'a' ; ch <= 'z' ; ch++)
 		putchar(ch);
