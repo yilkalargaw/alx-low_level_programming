@@ -4,10 +4,12 @@
  *
  * Return: returns 0
  */
-int main () {
+int main(void)
+{
 	unsigned int i=0;
+
 	for (i = 0; i <= 15; i++)
 		putchar("0123456789ABCDEF"[i]);
 
-   return(0);
+	return(0);
 }
