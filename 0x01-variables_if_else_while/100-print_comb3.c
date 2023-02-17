@@ -2,7 +2,6 @@
 
 int main(void)
 {
-	char digit[4];
 	unsigned int i;
 	unsigned int j;
 
