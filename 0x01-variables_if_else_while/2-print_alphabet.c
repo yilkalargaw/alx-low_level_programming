@@ -4,12 +4,12 @@
  *
  * Return: returns 0
  */
-int main () {
-	char ch=0;
-   for(ch = 'a' ; ch <= 'z' ; ch++)
-	  putchar(ch);
+int main(void) {
+	char ch = 0;
+	for(ch = 'a' ; ch <= 'z' ; ch++)
+		putchar(ch);
 
-   putchar(10);
+	putchar(10);
 
    return(0);
 }
