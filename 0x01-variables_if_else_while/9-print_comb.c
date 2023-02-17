@@ -4,8 +4,10 @@
  *
  * Return: returns 0
  */
-int main () {
+int main(void)
+{
 	unsigned int i=0;
+
 	for (i = 0; i < 10; i++)
 	{
 		putchar('0' + i);
@@ -16,5 +18,5 @@ int main () {
 		}
 	}
 
-	return(0);
+	return (0);
 }
