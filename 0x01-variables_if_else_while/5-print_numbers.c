@@ -5,9 +5,9 @@
  * Return: returns 0
  */
 int main () {
-	char ch=0;
-   for(ch = 0 ; ch < 10 ; ch++)
-	  printf(ch);
+	unsigned int i=0;
+   for(i = 0 ; i < 10 ; i++)
+	   printf("%i", i);
 
    putchar(10);
 
