@@ -12,9 +12,9 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n<0)
+	if (n < 0)
 		printf("%d is %s", n , "negative");
-	else if(n=0)
+	else if(n == 0)
 		printf("0 is zero");
 	else
 		printf("%d is %s", n , "positive");
