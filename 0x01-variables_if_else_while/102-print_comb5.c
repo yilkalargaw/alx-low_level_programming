@@ -19,20 +19,20 @@ int main(void)
 		y = (i % 100) / 10;
 		z = i % 10;
 
-		if(((w * 10) + x) >= ((y*10) + z))
+		if (((w * 10) + x) >= ((y*10) + z))
 			continue;
 
-			putchar('0' + w);
-			putchar('0' + x);
-			putchar(' ');
-			putchar('0' + y);
-			putchar('0' + z);
+		putchar('0' + w);
+		putchar('0' + x);
+		putchar(' ');
+		putchar('0' + y);
+		putchar('0' + z);
 
-			if (!(w == 9 && x == 8 && y == 9 && z == 9))
-			{
-				putchar(',');
-				putchar(' ');
-			}
+		if (!(w == 9 && x == 8 && y == 9 && z == 9))
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar(10);
 
