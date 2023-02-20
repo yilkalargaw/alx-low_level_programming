@@ -19,7 +19,7 @@ int main(void)
 		y = (i % 100) / 10;
 		z = i % 10;
 
-		if (((w * 10) + x) >= ((y*10) + z))
+		if (((w * 10) + x) >= ((y * 10) + z))
 			continue;
 
 		putchar('0' + w);
