@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
 /**
  * print_to_98 - check the code
@@ -8,7 +8,7 @@
  */
 int print_to_98(int num)
 {
-    int i;
+	int i;
 
 	for (int i = num ; i <= 98; i++)
 		printf("%d%s", i, (i == 98) ? "\n" , ", ");
