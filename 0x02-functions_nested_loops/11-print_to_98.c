@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_to_98 - check the code
  * @num: input number
  * Return: Always 0.
  */
