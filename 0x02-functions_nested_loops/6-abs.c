@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _isalpha - short description
+ * _abs - short description
  * @num: input character
- * Return: 1 if pos, -1 if neg else 0
+ * Return: absolute value of num
  */
 int _abs(int num)
 {
