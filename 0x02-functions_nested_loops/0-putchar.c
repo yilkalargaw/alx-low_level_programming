@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - is the place we are printing a formatted string to stdout
  *
