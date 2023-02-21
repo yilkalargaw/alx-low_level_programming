@@ -12,7 +12,7 @@ void print_alphabet_x10(void)
 	for (i = 0 ; i < 260; i++)
 	{
 		_putchar('a' + (i % 26));
-		if( i%26 == 25)
+		if(i % 26 == 25)
 			_putchar(10);
 	}
 }
