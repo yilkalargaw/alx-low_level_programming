@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isalpha - short description
+ * print_sign - short description
  * @num: input character
  * Return: 1 if pos, -1 if neg else 0
  */
