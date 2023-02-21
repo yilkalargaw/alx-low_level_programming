@@ -1,10 +1,10 @@
 #include "main.h"
 /**
  * _islower - short description
- * @num: input character
+ * @c: input character
  * Return: 0 if lower
  */
-int _islower(int num)
+int _islower(int c)
 {
 	if ('a' <= num && 'z' >= num)
 		return (1);
