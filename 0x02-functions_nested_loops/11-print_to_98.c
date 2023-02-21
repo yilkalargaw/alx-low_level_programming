@@ -4,9 +4,9 @@
 /**
  * print_to_98 - check the code
  * @num: input number
- * Return: Always 0.
+ * Return: nothing
  */
-int print_to_98(int num)
+void print_to_98(int num)
 {
 	int i;
 
