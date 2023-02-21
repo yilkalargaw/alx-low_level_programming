@@ -2,7 +2,7 @@
 /**
  * _isalpha - short description
  * @c: input character
- * Return: 0 if lower
+ * Return: 0 if alpha
  */
 int _isalpha(int c)
 {
