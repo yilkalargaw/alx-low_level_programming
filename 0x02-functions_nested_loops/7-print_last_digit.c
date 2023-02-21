@@ -1,10 +1,11 @@
 #include "main.h"
 /**
- * _abs - short description
+ * print_last_digit - print last digit
  * @num: input character
  * Return: last_digit of the
  */
 int print_last_digit(int num)
 {
-		return (num % 10);
+	_putchar(num % 10);
+	return (num % 10);
 }
