@@ -1,8 +1,8 @@
 #include <stdio.h>
+
 /**
- * main - Lists all the 5 and 3 multiples below 1024 (excluded)
- *
- * Return: 0
+ * main - add all 3 and 5 multiples below 1024
+ * * Return: 0
  *
 */
 
@@ -13,13 +13,13 @@ int main(void)
 
 	sum = 0;
 
-	for (i = 0; i <= 1024; i++)
+	for (i = 0; i < 1024; i++)
 	{
 		if ((i % 3) == 0 || (i % 5) == 0)
 			sum += i;
 	}
 
 	printf("%ul\n", sum);
-
 	return (0);
+
 }
