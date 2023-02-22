@@ -24,7 +24,7 @@ void print_times_table(int num)
 								printf("0\n");
 							else
 								printf("%3d%s",
-										i * j, (j == num) ? "\n" : ", ");
+									i * j, (j == num) ? "\n" : ", ");
 						}
 				}
 		}
