@@ -8,8 +8,11 @@
 int main()
 {
 	int i;
-	unsigned long num1 = 0, num2 = 1;
-	int num_next = num1 + num1;
+	unsigned long num1 = 0;
+	unsigned long num2 = 1;
+	unsigned long num_next;
+
+	num_next = num1 + num1;
 
 	for (i = 3; i <= 98; ++i)
 	{
