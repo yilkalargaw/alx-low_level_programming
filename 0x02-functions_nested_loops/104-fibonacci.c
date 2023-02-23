@@ -12,7 +12,9 @@ int main()
 	unsigned long num2 = 1;
 	unsigned long num_next;
 
-	num_next = num1 + num1;
+	num_next = num1 + num2;
+
+	printf("%lu, %lu, ", num1, num2);
 
 	for (i = 3; i <= 98; ++i)
 	{
