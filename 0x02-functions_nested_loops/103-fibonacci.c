@@ -25,7 +25,7 @@ int main(void)
 		num_next = num1 + num2;
 
 		if ((num_next % 2) == 0)
-			sum += next_num;
+			sum += num_next;
 
 		i++;
 	}
