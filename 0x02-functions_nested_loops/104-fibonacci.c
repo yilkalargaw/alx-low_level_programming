@@ -5,7 +5,7 @@
  *
 */
 
-int main()
+int main(void)
 {
 	int i;
 	unsigned long num1 = 1;
@@ -24,5 +24,5 @@ int main()
 		num_next = num1 + num2;
 	}
 
-	return 0;
+	return (0);
 }
