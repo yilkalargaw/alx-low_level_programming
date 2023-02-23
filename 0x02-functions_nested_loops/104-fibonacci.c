@@ -9,7 +9,7 @@ int main()
 {
 	int i;
 	unsigned long num1 = 1;
-	unsigned long num2 = 1;
+	unsigned long num2 = 2;
 	unsigned long num_next;
 
 	num_next = num1 + num2;
