@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * more_numbers - prints the alphabet using _putchar
+ * print_square - prints the alphabet using _putchar
  * @size: input square size
  * Return: void
  */
