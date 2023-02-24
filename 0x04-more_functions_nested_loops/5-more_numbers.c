@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * void more_numbers - prints the alphabet using _putchar
+ * more_numbers - prints the alphabet using _putchar
  *
  * Return: void
  */
