@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_square - prints the alphabet using _putchar
+ * print_triangle - prints the alphabet using _putchar
  * @size: input square size
  * Return: void
  */
