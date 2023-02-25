@@ -12,15 +12,14 @@ void print_number(int n)
 
 	/* extract magnitude */
 	if (n < 0)
+	{
 		magnitude = -1 * n;
-
-	if (n < 0)
 		_putchar('-');
-
+	}
 	while (magnitude / 10 != 0 )
-		{
-			_putchar('0' + (magnitude % 10));
-			magnituder /= 10;
-		}
+	{
+		_putchar('0' + (magnitude % 10));
+		magnitude /= 10;
+	}
 
 }
