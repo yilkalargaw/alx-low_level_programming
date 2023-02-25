@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -8,21 +7,17 @@
  */
 void print_number(int n)
 {
-	int magnitude = n;
-
+	int magnitude;
 
 	/* extract magnitude */
-	(n >= 0) ? (magnitude = n) : (magnitude = -1 * n);
+	(n >= 0) ? (magnitude = n) : (magnitude = -n);
 
 	/* print number using recursion */
 	if (n < 0)
-	{
-		magnitude = -1 * n;
 		_putchar('-');
-	}
 
 	if (magnitude / 10 != 0)
-		print_number (magnitude / 10);
+		print_number(magnitude / 10);
 
 	_putchar('0' + (magnitude % 10));
 
