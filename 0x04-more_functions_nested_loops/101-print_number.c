@@ -10,16 +10,20 @@ void print_number(int n)
 {
 	int magnitude = n;
 
+
 	/* extract magnitude */
+	(n >= 0) ? (magnitude = n) : (magnitude = -1 * n);
+
+	/* print number using recursion */
 	if (n < 0)
 	{
 		magnitude = -1 * n;
 		_putchar('-');
 	}
-	while (magnitude / 10 != 0 )
-	{
-		_putchar('0' + (magnitude % 10));
-		magnitude /= 10;
-	}
+
+	if (magnitude / 10 != 0)
+		print_number (magnitude / 10);
+
+	_putchar('0' + (magnitude % 10));
 
 }
