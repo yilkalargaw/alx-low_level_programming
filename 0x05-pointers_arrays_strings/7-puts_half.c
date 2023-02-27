@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- * puts_half - prints a string
+ * puts - prints a string
  * @str: pointer to string
  *
  * Return: len (Size s).
  */
 void puts_half(char *str)
 {
-	int i = 0;
+	int i;
 	int len;
 
 	len = 0;
 	while (str[len] != 0)
 		len++;
 
-	for (i = len; i >= len / 2 ; i--)
+	for (i = len / 2; i < len ; i++)
 		_putchar(*(str + i));
 
 	_putchar(10);
