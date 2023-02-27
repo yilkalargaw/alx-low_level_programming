@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts - prints a string
+ * puts_half - prints a string
  * @str: pointer to string
  *
  * Return: len (Size s).
