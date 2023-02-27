@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _puts - prints a string
+ * puts_half - prints a string
  * @str: pointer to string
  *
  * Return: len (Size s).
  */
-void _puts(char *str)
+void puts_half(char *str)
 {
 	int i = 0;
 	int len;
