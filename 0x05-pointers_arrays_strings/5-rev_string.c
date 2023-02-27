@@ -10,7 +10,7 @@ void rev_string(char *s)
 	int i;
 	int j;
 
-	char tmp[100];
+	char tmp[1000];
 
 	for (i = 0; *(s + i) != 0; i++)
 		tmp[i] = *(s + i);
