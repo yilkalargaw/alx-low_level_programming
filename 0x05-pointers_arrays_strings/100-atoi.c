@@ -28,6 +28,8 @@ int _atoi(char *s)
 			sign *= -1;
 		else if (s[i] == '+' || s[i] == ' ')
 			sign *= 1;
+		else if (num == 0)
+			continue;
 		else
 			return (num * sign);
 	}
