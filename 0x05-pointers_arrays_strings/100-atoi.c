@@ -22,11 +22,11 @@ int _atoi(char *s)
 
 	for (i = 0; i < len; i++)
 	{
-		if (s[i] >= 48 && s[i] <= 57)
+		else if (s[i] >= 48 && s[i] <= 57)
 			num = (num * 10) + (s[i] - 48);
 		else if (s[i] == '-')
 			sign *= -1;
-		else if (s[i] == '+')
+		else if (s[i] == '+' || s[i] == ' ')
 			sign *= 1;
 		else
 			return (num * sign);
