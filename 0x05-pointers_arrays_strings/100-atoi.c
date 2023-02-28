@@ -27,7 +27,7 @@ int _atoi(char *s)
 		else if (s[i] == '-')
 			sign *= -1;
 		else if (s[i] == ';')
-			break;
+			return (num * sign);
 		else
 			continue;
 	}
