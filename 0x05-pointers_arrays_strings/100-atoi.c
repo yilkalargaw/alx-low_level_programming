@@ -26,6 +26,8 @@ int _atoi(char *s)
 			num = (num * 10) + (s[i] - 48);
 		else if (s[i] == '-')
 			sign *= -1;
+		else if (s[i] == '+')
+			continue;
 		else
 			return (num * sign);
 	}
