@@ -20,7 +20,7 @@ int _atoi(char *s)
 
 	if (s[0] == '-')
 	{
-		for(i = 1; i<len; i++)
+		for (i = 1; i < len; i++)
 		{
 			if (s[i] >= 48 && s[i] <= 57)
 				num = (num * 10) + (s[i] - 48);
@@ -31,7 +31,7 @@ int _atoi(char *s)
 	}
 	else
 	{
-		for(i = 0; i<len; i++)
+		for(i = 0; i < len; i++)
 		{
 			if (s[i] >= 48 && s[i] <= 57)
 				num = (num * 10) + (s[i] - 48);
