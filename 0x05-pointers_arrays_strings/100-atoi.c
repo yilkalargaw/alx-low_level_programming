@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _atoi - convert to numbers array
- * @s string pointer
+ * @s: string pointer
  *
  * Return: int
  */
