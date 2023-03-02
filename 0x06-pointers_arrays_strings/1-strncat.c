@@ -1,0 +1,26 @@
+#include "main.h"
+
+/**
+ ** _strcat - concatenates two char arrays
+ * @dest: input pointer char*
+ * @src: output pointer char*
+ * @n: length
+ *
+ * Return: pointer to destination
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+
+	unsigned int i = 0;
+	unsigned int j = 0;
+
+	while (dest[i] != '\0')
+		i++;
+
+	for (j = 0; j < n ; j++, i++)
+		dest[i] = src[j];
+
+	dest[i] = '\0';
+
+	return (dest);
+}
