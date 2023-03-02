@@ -22,5 +22,5 @@ char *leet(char *s)
 				s[i] = replacements[j];
 		}
 	}
-	return s;
+	return (s);
 }
