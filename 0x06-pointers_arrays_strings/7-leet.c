@@ -6,25 +6,21 @@
  *
  * Return: pointer to output string
  */
+
 char *leet(char *s)
 {
+	char *text = "aAeEoOtTlL";
+	char *replacements = "4433007711";
 	int i = 0;
+	int j = 0;
 
-	while (s[i])
+	for (; s[i] != 0; i++)
 	{
-		if (s[i] == 'A' || s[i] == 'a')
-			s[i] = '4';
-		else if (s[i] == 'E' || s[i] == 'e')
-			s[i] = '3';
-		else if (s[i] == 'O' || s[i] == 'o')
-			s[i] = '0';
-		else if (s[i] == 'T' || s[i] == 't')
-			s[i] = '7';
-		else if (s[i] == 'L' || s[i] == 'l')
-			s[i] = '1';
-
-		i++;
+		for (j = 0; j < 10 ; j++)
+		{
+			if (s[i] == text[j])
+				s[i] = replacements[j];
+		}
 	}
-
-	return (s);
+	return s;
 }
