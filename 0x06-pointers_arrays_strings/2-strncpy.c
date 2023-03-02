@@ -9,10 +9,9 @@
  * Return: pointer to destination
  */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 
-	int i = 0;
 	int j = 0;
 
 	for (; j < n && src[j] != 0 ; j++)
