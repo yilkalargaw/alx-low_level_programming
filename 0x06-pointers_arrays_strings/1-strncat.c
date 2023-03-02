@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- ** _strcat - concatenates two char arrays
+ * _strncat - concatenates two char arrays
  * @dest: input pointer char*
  * @src: output pointer char*
  * @n: length
