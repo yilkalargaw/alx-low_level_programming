@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * reverse_array - compares two strings
+ * string_toupper - compares two strings
  * @s: pointer to string s
  *
- * Return: char * of reversed string
+ * Return: char * of upped string
  */
 
 char *string_toupper(char *s)
@@ -15,8 +15,6 @@ char *string_toupper(char *s)
 	{
 		if (s[i] >= 97 && s[i] <= 122)
 			s[i] = s[i] - 32;
-		else
-			continue;
 	}
 
 	return (s);
