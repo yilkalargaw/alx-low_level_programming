@@ -8,20 +8,21 @@
 char *rot13(char *str)
 {
 	char *p = str;
+	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i = 0, j = 0;
 
-	while (*p != '\0')
+
+	for (; p[j] != '\0'; j++)
 	{
-		char c = *p;
-
-		if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		for (i = 0; i <= 52; i++)
 		{
-			if (c >= 65 && c <= 90)
-				c = 65 + (c - 65 + 13) % 26;
-			else
-				c = 97 + (c - 97 + 13) % 26;
+			if (p[j] == alphabet[i])
+				{
+					p[j] = rot13[i];
+					break;
+				}
 		}
-		*p = c;
-		p++;
 	}
 	return (p);
 }
