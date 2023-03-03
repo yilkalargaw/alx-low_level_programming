@@ -18,10 +18,10 @@ char *rot13(char *str)
 		for (i = 0; i <= 52; i++)
 		{
 			if (p[j] == alphabet[i])
-				{
-					p[j] = rot13[i];
-					break;
-				}
+			{
+				p[j] = rot13[i];
+				break;
+			}
 		}
 	}
 	return (p);
