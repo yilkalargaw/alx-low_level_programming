@@ -13,6 +13,7 @@ char *_strpbrk(char *s, char *accept)
 {
 	int table[256] = {0};
 	char *p = accept;
+
 	for (; *p; p++)
 		table[(unsigned char)*p] = 1;
 
@@ -21,7 +22,7 @@ char *_strpbrk(char *s, char *accept)
 	for (; *p; p++)
 	{
 		if (table[(unsigned char)*p])
-			return p;
+			return (p);
 		p++;
 	}
 
