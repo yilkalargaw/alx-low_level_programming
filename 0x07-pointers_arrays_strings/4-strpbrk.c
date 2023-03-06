@@ -23,8 +23,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		if (table[(unsigned char)*p])
 			return (p);
-		p++;
 	}
 
-	return (0);
+	return ('\0');
 }
