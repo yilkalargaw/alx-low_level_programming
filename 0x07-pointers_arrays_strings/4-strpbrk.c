@@ -11,19 +11,19 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-    int table[256] = {0};
-    char *p = accept;
-    for (; *p; p++)
-        table[(unsigned char)*p] = 1;
+	int table[256] = {0};
+	char *p = accept;
+	for (; *p; p++)
+		table[(unsigned char)*p] = 1;
 
-    p = s;
+	p = s;
 
-    for (; *p; p++)
-    {
-        if (table[(unsigned char)*p])
-            return p;
-        p++;
-    }
+	for (; *p; p++)
+	{
+		if (table[(unsigned char)*p])
+			return p;
+		p++;
+	}
 
-    return (0);
+	return (0);
 }
