@@ -12,9 +12,9 @@ void print_chessboard(char (*a)[8])
 	/*Declaring variables*/
 	unsigned int i = 0, j;
 
-	for (;i < 8; i++) /*number repetitions*/
+	for (; i < 8; i++) /*number repetitions*/
 	{
-		for (j=0; j < 8; j++)
+		for (j = 0; j < 8; j++)
 			putchar(a[i][j]);
 
 		putchar (10);
