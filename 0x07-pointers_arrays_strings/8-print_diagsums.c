@@ -4,6 +4,7 @@
 /**
  * print_diagsums - a function that prints sum of diagonals
  * @a: 2d array representing a matrix
+ * @size: size of matrix
  *
  *Return: void
  */
