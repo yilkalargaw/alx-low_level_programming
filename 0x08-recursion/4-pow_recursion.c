@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * pow - calculates factorial
+ * _pow_recursion - calculates factorial
  * @x: input 1
  * @y: input 2
  *
