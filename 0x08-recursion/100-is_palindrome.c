@@ -2,7 +2,7 @@
 
 /**
  * str_len - calculate string length with recursion
- * @s: input string
+ * @str: input string
  *
  * Return: length as int
  */
@@ -15,7 +15,7 @@ int str_len(char *str)
 }
 
 /**
- * _is_palindrome_checker - calculates factorial
+ * is_palindrome_checker - calculates factorial
  * @s: input string
  * @b: beginning char index
  * @e: ending char index
@@ -26,19 +26,19 @@ int is_palindrome_checker(const char *s, int b, int e)
 {
 	if ((e - 1) <= b)
 		return (1);
-	if (s[b] != s[e-1])
+	if (s[b] != s[e - 1])
 		return (0);
 
 	return (is_palindrome_checker(s, b + 1, e - 1));
 }
 
 /**
- * _is_palindrome - calculates factorial
+ * is_palindrome - calculates factorial
  * @s: input string
  *
  * Return:palindrome? as int
  */
 int is_palindrome(char *s)
 {
-	return(is_palindrome_checker(s, 0, str_len(s)));
+	return (is_palindrome_checker(s, 0, str_len(s)));
 }
