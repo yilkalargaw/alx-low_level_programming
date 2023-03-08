@@ -1,6 +1,23 @@
 #include "main.h"
 #include <string.h>
 /**
+ * _is_palindrome_checker - calculates factorial
+ * @s: input string
+ * @b: beginning char index
+ * @e: ending char index
+ * Return: factorial as int
+ */
+int is_palindrome_checker(const char *s, int b, int e)
+{
+	if ((e - 1) <= b)
+		return 1;
+	if (s[b] != s[e-1])
+	   return 0;
+
+  return is_palindrome_checker(s, b+1, e-1);
+}
+
+/**
  * _is_palindrome - calculates factorial
  * @s: input string
  *
@@ -8,15 +25,5 @@
  */
 int is_palindrome(char *s)
 {
-    int len = strlen(s);
-
-	if (len == 0 || len == 1)
-		return 1;
-
-	if (s[0] != s[len - 1])
-		return 0;
-
-	s[len - 1] = 0;
-
-	return is_palindrome(s + 1);
+	return(is_palindrome_checker(s, 0, strlen(s) - 1));
 }
