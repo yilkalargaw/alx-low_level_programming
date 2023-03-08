@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts_recursion - ex 2 on 0x08
+ * _strlen_recursion - ex 2 on 0x08
  * @s: string pointer
  *
  * Return: string length
