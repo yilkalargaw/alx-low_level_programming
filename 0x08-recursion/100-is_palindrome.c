@@ -1,5 +1,19 @@
 #include "main.h"
-#include <string.h>
+
+/**
+ * str_len - calculate string length with recursion
+ * @s: input string
+ *
+ * Return: factorial as int
+ */
+int str_len(char *str)
+{
+    if (*str == '\0')
+        return 0;
+
+    return 1 + str_len(str + 1);
+}
+
 /**
  * _is_palindrome_checker - calculates factorial
  * @s: input string
@@ -7,6 +21,7 @@
  * @e: ending char index
  * Return: factorial as int
  */
+
 int is_palindrome_checker(const char *s, int b, int e)
 {
 	if ((e - 1) <= b)
@@ -25,5 +40,5 @@ int is_palindrome_checker(const char *s, int b, int e)
  */
 int is_palindrome(char *s)
 {
-	return(is_palindrome_checker(s, 0, strlen(s) - 1));
+	return(is_palindrome_checker(s, 0, str_len(s) - 1));
 }
