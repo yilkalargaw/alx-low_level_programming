@@ -2,8 +2,8 @@
 /**
  * sqrt_helper - check prime
  * @n: number
- * @i: input 2
- * @h: high
+ * @low: low number
+ * @high: high
  *
  * Return: int for sqrt
  */
@@ -29,7 +29,7 @@ int sqrt_helper(int n, int low, int high)
 }
 
 /**
- * sqrt_recursion - check prime
+ * _sqrt_recursion - check prime
  * @n: number
  *
  * Return: int for sqrt
