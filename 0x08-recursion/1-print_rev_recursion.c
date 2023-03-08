@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts_recursion - ex 1 on 0x08
+ * _print_rev_recursion - ex 1 on 0x08
  * @s: string pointer
  *
  * Return: void
