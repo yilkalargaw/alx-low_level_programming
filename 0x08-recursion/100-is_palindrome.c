@@ -11,7 +11,7 @@ int str_len(char *str)
 	if (*str == '\0')
 		return 0;
 
-	return 1 + str_len(str + 1);
+	return (1 + str_len(str + 1));
 }
 
 /**
@@ -26,10 +26,10 @@ int is_palindrome_checker(const char *s, int b, int e)
 {
 	if ((e - 1) <= b)
 		return 1;
-	if (s[b] != s[e-1])
+	else if (s[b] != s[e-1])
 	   return 0;
 
-  return is_palindrome_checker(s, b+1, e-1);
+	return (is_palindrome_checker(s, b + 1, e - 1));
 }
 
 /**
