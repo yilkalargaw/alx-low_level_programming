@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * _is_palindrome - calculates factorial
  * @s: input string
@@ -8,10 +8,7 @@
  */
 int is_palindrome(char *s)
 {
-	int len = 0;
-
-	while (s[len] != 0)
-		len++;
+    int len = strlen(s);
 
 	if (len == 0 || len == 1)
 		return 1;
