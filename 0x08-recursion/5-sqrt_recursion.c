@@ -19,13 +19,13 @@ int sqrt_helper(int n, int low, int high)
 	if (mid == 0)
 		return (-1);
 
-	if (mid == n / mid || mid == n / (mid+1))
+	if (mid == n / mid || mid == n / (mid + 1))
 		return (mid);
 
-	if (mid < n/mid)
+	if (mid < n / mid)
 		return (sqrt_helper(n, mid + 1, high));
 
-	return sqrt_helper(n, low , mid - 1);
+	return (sqrt_helper(n, low, mid - 1));
 }
 
 /**
