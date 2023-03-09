@@ -13,5 +13,6 @@ char *cap_string(char *);
 char *rot13(char *);
 int _putchar(char c);
 void print_number(int n);
+int is_palindrome(char *s);
 
 #endif
