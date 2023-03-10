@@ -28,7 +28,7 @@ int my_atoi(char *s)
 {
 	int result = 0;
 
-	for (; *s != 0; s ++)
+	for (; *s != 0; s++)
 		result = result * 10 + (*s - '0');
 
 	return (result);
