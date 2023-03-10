@@ -11,7 +11,7 @@ int isnumber(char *s)
 {
 	for (; *s != '\0'; s++)
 	{
-		if (*s < '0' || *s > '9' || *s == '+')
+		if (*s < '0' || *s > '9')
 			return (0);
 	}
 
