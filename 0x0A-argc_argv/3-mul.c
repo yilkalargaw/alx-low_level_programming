@@ -22,5 +22,5 @@ int main(int argc, char *argv[])
 
 	printf("%i\n", num1 * num2);
 
-	return (num1 * num2);
+	return (0);
 }
