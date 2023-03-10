@@ -35,7 +35,6 @@ int my_atoi(char *s)
 }
 
 /**
-/**
  * main - adds numbers.
  * @argc: input size
  * @argv: input string array
