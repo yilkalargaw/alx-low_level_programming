@@ -37,6 +37,7 @@ char *str_concat(char *s1, char *s2)
 	j = 0;
 	for (; j < len2; j++) /* copy s2 to cat */
 		cat[i + j] = s2[j];
+
 	cat[i + j] = 0; /* add null terminator */
 
 	return (cat); /* return the pointer to cat */
