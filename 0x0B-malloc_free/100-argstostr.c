@@ -12,7 +12,8 @@ char *argstostr(int ac, char **av)
 	int i, j, len = 0, k = 0;
 	char *str;
 
-	/* Check if the number of arguments is zero or the array of arguments is NULL */
+	/* Check if the number of arguments
+	   is zero or the array of arguments is NULL */
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
