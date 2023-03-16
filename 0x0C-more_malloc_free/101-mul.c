@@ -106,8 +106,7 @@ int main(int argc, char **argv)
 	s1 = argv[1];
 	s2 = argv[2];
 
-	i = 0;
-	for (; s1[i]; i++)
+	for (i = 0; s1[i]; i++)
 	{
 		if (!_isdigit(s1[i]))
 		{
@@ -115,9 +114,7 @@ int main(int argc, char **argv)
 			return (98);
 		}
 	}
-
-	i = 0;
-	for (; s2[i]; i++)
+	for (i = 0; s2[i]; i++)
 	{
 		if (!_isdigit(s2[i]))
 		{
@@ -125,7 +122,6 @@ int main(int argc, char **argv)
 			return (98);
 		}
 	}
-
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	len_product = len1 + len2;
@@ -141,17 +137,13 @@ int main(int argc, char **argv)
 			product[i + j + 1] %= 10;
 		}
 	}
-
 	i = 0;
 	for (;i < len_product && product[i] == 0; i++)
 		;
-
 	if (i == len_product)
 		putchar('0');
-
 	for (; i < len_product; i++)
 		putchar(product[i] + '0');
-
 	putchar('\n');
 	free(product);
 	return (0);
