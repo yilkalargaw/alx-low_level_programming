@@ -95,7 +95,7 @@ int _atoi(char *s)
  */
 int main(int argc, char **argv)
 {
-	int i, j, len1, len2, len_product, *result;
+	int i, j, len1, len2, len_product, *product;
 	char *s1, *s2;
 
 	if (argc != 3)
@@ -129,30 +129,30 @@ int main(int argc, char **argv)
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	len_product = len1 + len2;
-	result = calloc(len_product, sizeof(int));
-	if (result == NULL)
+	product = calloc(len_product, sizeof(int));
+	if (product == NULL)
 		return (1);
 	for (i = len1 - 1; i >= 0; i--)
 	{
 		for (j = len2 - 1; j >= 0; j--)
 		{
-			result[i + j + 1] += (s1[i] - '0') * (s2[j] - '0');
-			result[i + j] += result[i + j + 1] / 10;
-			result[i + j + 1] %= 10;
+			product[i + j + 1] += (s1[i] - '0') * (s2[j] - '0');
+			product[i + j] += product[i + j + 1] / 10;
+			product[i + j + 1] %= 10;
 		}
 	}
 
 	i = 0;
-	for (;i < len_product && result[i] == 0; i++)
+	for (;i < len_product && product[i] == 0; i++)
 		;
 
 	if (i == len_product)
 		putchar('0');
 
 	for (; i < len_product; i++)
-		putchar(result[i] + '0');
+		putchar(product[i] + '0');
 
 	putchar('\n');
-	free(result);
+	free(product);
 	return (0);
 }
