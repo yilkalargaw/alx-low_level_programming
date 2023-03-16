@@ -102,11 +102,19 @@ int main(int argc, char **argv)
 
 	for (i = 0; s1[i] && _isdigit(s1[i]); i++)
 		;
-	(s1[i]) ? return (puts("Error"), 98) : (void) 0;
-
+	(s1[i] != 0) ? return (puts("Error"), 98) : (void) 0;
+	if (s1[i])
+	{
+		puts("Error");
+		return (98);
+	}
 	for (i = 0; s2[i] && _isdigit(s2[i]); i++)
 		;
-	(s2[i]) ? return (puts("Error"), 98) : (void) 0;
+	if (s2[i])
+	{
+		puts("Error");
+		return (98);
+	}
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	len_product = len1 + len2;
