@@ -131,7 +131,6 @@ int main(int argc, char **argv)
 	else
 		for (; i < len_product; i++)
 			_putchar(product[i] + '0');
-
 	_putchar('\n');
 	free(product);
 	return (0);
