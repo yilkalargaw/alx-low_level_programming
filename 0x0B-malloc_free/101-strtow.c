@@ -44,7 +44,7 @@ char **strtow(char *str)
 		{
 			len = 0;
 			j = i;
-			for (;str[j] && !check_space(str[j]); len++, j++)
+			for (; str[j] && !check_space(str[j]); len++, j++)
 				;
 
 			words[k] = malloc(sizeof(char) * (len + 1));
