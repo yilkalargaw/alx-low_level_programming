@@ -98,36 +98,24 @@ int main(int argc, char **argv)
 	int i, j, len1, len2, len_product, *product;
 	char *s1, *s2;
 
-	if (argc != 3)
-	{
-		_puts("Error\n");
-		return (98);
-	}
-	s1 = argv[1];
-	s2 = argv[2];
+	(argc != 3 || !*argv[1] || !*argv[2]) ? (puts("Error"), exit(98)) : (void)0;
 
-	for (i = 0; s1[i]; i++)
-	{
-		if (!_isdigit(s1[i]))
-		{
-			_puts("Error\n");
-			return (98);
-		}
-	}
-	for (i = 0; s2[i]; i++)
-	{
-		if (!_isdigit(s2[i]))
-		{
-			_puts("Error\n");
-			return (98);
-		}
-	}
+	for (i = 0; s1[i] && _isdigit(s1[i]); i++)
+		;
+	if (s1[i])
+		return (puts("Error"), 98);
+
+	for (i = 0; s2[i] && _isdigit(s2[i]); i++)
+		;
+	if (s2[i])
+		return (puts("Error"), 98);
+
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	len_product = len1 + len2;
-	product = calloc(len_product, sizeof(int));
-	if (product == NULL)
-		return (1);
+	product = malloc(len_product * sizeof(int));
+	(!product) ? (exit(1)) : (void)0;
+
 	for (i = len1 - 1; i >= 0; i--)
 	{
 		for (j = len2 - 1; j >= 0; j--)
@@ -137,14 +125,18 @@ int main(int argc, char **argv)
 			product[i + j + 1] %= 10;
 		}
 	}
-	i = 0;
-	for (;i < len_product && product[i] == 0; i++)
+
+	for (i = 0; i < len_product && product[i] == 0; i++)
 		;
 	if (i == len_product)
-		putchar('0');
-	for (; i < len_product; i++)
-		putchar(product[i] + '0');
-	putchar('\n');
+		_putchar('0');
+	else
+	{
+		for (; i < len_product; i++)
+			_putchar(product[i] + '0');
+	}
+	_putchar('\n');
+
 	free(product);
 	return (0);
 }
