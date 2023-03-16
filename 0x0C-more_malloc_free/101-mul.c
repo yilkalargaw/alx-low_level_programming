@@ -68,7 +68,6 @@ int _atoi(char *s)
 	while (s[len] != 0)
 		len++;
 
-
 	for (i = 0; i < len; i++)
 	{
 		if (s[i] >= 48 && s[i] <= 57)
@@ -80,7 +79,7 @@ int _atoi(char *s)
 		else if (num == 0)
 			continue;
 		else
-			return (num * sign);
+			break;
 	}
 
 	return (num * sign);
