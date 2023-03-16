@@ -94,54 +94,54 @@ int _atoi(char *s)
  */
 int main(int argc, char **argv)
 {
-    int i, j, len1, len2, len_product, *product;
-    char *s1 = argv[1], *s2 = argv[2];
-    int sign = 1;
+	int i, j, len1, len2, len_product, *product;
+	char *s1 = argv[1], *s2 = argv[2];
+	int sign = 1;
 
-    if (argc != 3 || !*argv[1] || !*argv[2])
-        return (puts("Error"), 98);
+	if (argc != 3 || !*argv[1] || !*argv[2])
+		return (puts("Error"), 98);
 
-    if (s1[0] == '-')
-        sign *= -1, s1++;
-    if (s2[0] == '-')
-        sign *= -1, s2++;
+	if (s1[0] == '-')
+		sign *= -1, s1++;
+	if (s2[0] == '-')
+		sign *= -1, s2++;
 
-    for (i = 0; s1[i] && _isdigit(s1[i]); i++)
+	for (i = 0; s1[i] && _isdigit(s1[i]); i++)
 		;
-    if (s1[i])
-        return (puts("Error"), 98);
-    for (i = 0; s2[i] && _isdigit(s2[i]); i++)
+	if (s1[i])
+		return (puts("Error"), 98);
+	for (i = 0; s2[i] && _isdigit(s2[i]); i++)
 		;
-    if (s2[i])
-        return (puts("Error"), 98);
+	if (s2[i])
+		return (puts("Error"), 98);
 
-    len1 = _strlen(s1);
-    len2 = _strlen(s2);
-    len_product = len1 + len2;
-    product = malloc(len_product * sizeof(int));
-    if (!product)
-        exit(1);
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+	len_product = len1 + len2;
+	product = malloc(len_product * sizeof(int));
+	if (!product)
+		exit(1);
 
-    for (i = len1 - 1; i >= 0; i--)
-        for (j = len2 - 1; j >= 0; j--)
-        {
-            product[i + j + 1] += (s1[i] - '0') * (s2[j] - '0');
-            product[i + j] += product[i + j + 1] / 10;
-            product[i + j + 1] %= 10;
-        }
+	for (i = len1 - 1; i >= 0; i--)
+		for (j = len2 - 1; j >= 0; j--)
+		{
+			product[i + j + 1] += (s1[i] - '0') * (s2[j] - '0');
+			product[i + j] += product[i + j + 1] / 10;
+			product[i + j + 1] %= 10;
+		}
 
-    if (sign == -1)
-        _putchar('-');
+	if (sign == -1)
+		_putchar('-');
 
-    for (i = 0; i < len_product && product[i] == 0; i++)
+	for (i = 0; i < len_product && product[i] == 0; i++)
 		;
-    if (i == len_product)
-        _putchar('0');
-    else
-        for (; i < len_product; i++)
-            _putchar(product[i] + '0');
+	if (i == len_product)
+		_putchar('0');
+	else
+		for (; i < len_product; i++)
+			_putchar(product[i] + '0');
 
-    _putchar('\n');
-    free(product);
-    return (0);
+	_putchar('\n');
+	free(product);
+	return (0);
 }
