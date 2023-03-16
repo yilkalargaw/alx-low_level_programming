@@ -1,11 +1,23 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * check_space - check for whitespaces
+ * @c: char
+ *
+ * Return: nonzero if true
+ */
 int check_space(char c)
 {
 	return (c == ' ' || c == '\n');
 }
 
+/**
+ * count_words - changes strings to words
+ * @str: the string
+ *
+ * Return: number of words
+ */
 int count_words(char *str)
 {
 	int count = 0;
@@ -25,6 +37,12 @@ int count_words(char *str)
 	return (count);
 }
 
+/**
+ * strtow - changes strings to words
+ * @str: the string
+ *
+ * Return: A pointer a pointer array to pointers of words
+ */
 char **strtow(char *str)
 {
 	char **words;
