@@ -123,7 +123,7 @@ int main(int argc, char **argv)
 			product[i + j] += product[i + j + 1] / 10;
 			product[i + j + 1] %= 10;
 		}
-	(sign == -1) ? _putchar('-') : 0+1;
+	(sign == -1) ? _putchar('-') : 0 + 1;
 	for (i = 0; i < len_product && product[i] == 0; i++)
 		;
 	if (i == len_product)
