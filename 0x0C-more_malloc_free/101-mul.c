@@ -107,13 +107,11 @@ int main(int argc, char **argv)
 	for (i = 0; s2[i] && _isdigit(s2[i]); i++)
 		;
 	(s2[i]) ? return (puts("Error"), 98) : (void) 0;
-
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	len_product = len1 + len2;
 	product = malloc(len_product * sizeof(int));
 	(!product) ? (exit(1)) : (void)0;
-
 	for (i = len1 - 1; i >= 0; i--)
 	{
 		for (j = len2 - 1; j >= 0; j--)
@@ -123,7 +121,6 @@ int main(int argc, char **argv)
 			product[i + j + 1] %= 10;
 		}
 	}
-
 	for (i = 0; i < len_product && product[i] == 0; i++)
 		;
 	if (i == len_product)
@@ -134,7 +131,6 @@ int main(int argc, char **argv)
 			_putchar(product[i] + '0');
 	}
 	_putchar('\n');
-
 	free(product);
 	return (0);
 }
