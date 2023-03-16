@@ -101,11 +101,12 @@ int main(int argc, char **argv)
 	if (argc != 3 || !*argv[1] || !*argv[2])
 		return (puts("Error"), 98);
 
-	for (i = 0; s1[i] && _isdigit(s1[i]); i++);
+	for (i = 0; s1[i] && _isdigit(s1[i]); i++)
+		;
 	if (s1[i])
 		return (puts("Error"), 98);
-
-	for (i = 0; s2[i] && _isdigit(s2[i]); i++);
+	for (i = 0; s2[i] && _isdigit(s2[i]); i++)
+		;
 	if (s2[i])
 		return (puts("Error"), 98);
 
@@ -123,8 +124,8 @@ int main(int argc, char **argv)
 			product[i + j] += product[i + j + 1] / 10;
 			product[i + j + 1] %= 10;
 		}
-
-	for (i = 0; i < len_product && product[i] == 0; i++);
+	for (i = 0; i < len_product && product[i] == 0; i++)
+		;
 	if (i == len_product)
 		_putchar('0');
 	else
