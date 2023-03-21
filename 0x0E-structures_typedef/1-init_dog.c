@@ -4,7 +4,7 @@
  * init_dog - initialize a dog struct with parameters
  * @d: struct pointer
  * @name: dog name
- * @float: dog age
+ * @age: dog age
  * @owner: dog owner
  * Return: 0
  */
