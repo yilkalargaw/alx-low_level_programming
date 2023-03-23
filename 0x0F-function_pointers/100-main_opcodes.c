@@ -30,21 +30,21 @@ void print_opcodes(char *start, int size) {
  */
 int main(int argc, char **argv) {
 
-    if (argc != 2)
+	if (argc != 2)
 	{
-        printf("Error\n");
-        return (1);
-    }
+		printf("Error\n");
+		return (1);
+	}
 
-    int size = atoi(argv[1]);
+	int size = atoi(argv[1]);
 
-    if (size < 0)
+	if (size < 0)
 	{
-        printf("Error\n");
-        return (2);
-    }
+		printf("Error\n");
+		return (2);
+	}
 
-    print_opcodes((char *)main, size);
+	print_opcodes((char *)main, size);
 
-    return (0);
+	return (0);
 }
