@@ -11,13 +11,13 @@
  */
 int main(int argc, char *argv[])
 {
+	int (*f)(int, int);
+
 	if (argc != 4)
 	{
 		puts("Error");
 		exit(98);
 	}
-
-	int (*f)(int, int);
 
 	f = get_op_func(argv[2]);
 
