@@ -8,26 +8,19 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
-	int i = 0;
-
-	while (i < 5)
+	switch (s[0])
 	{
-		switch (s[0])
-		{
-			case '+':
-				return (op_add);
-			case '-':
-				return (op_sub);
-			case '*':
-				return (op_mul);
-			case '/':
-				return (op_div);
-			case '%':
-				return (op_mod);
-			default:
-				return (NULL);
-		}
-		i++;
+		case '+':
+			return (op_add);
+		case '-':
+			return (op_sub);
+		case '*':
+			return (op_mul);
+		case '/':
+			return (op_div);
+		case '%':
+			return (op_mod);
+		default:
+			return (NULL);
 	}
-	return (NULL);
 }
