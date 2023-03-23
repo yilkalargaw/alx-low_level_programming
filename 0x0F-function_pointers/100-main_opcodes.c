@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
+/**
  * print_opcodes - prints the opcodes of its own main function.
  * @start - string pointer
  * @size -size
@@ -19,7 +19,7 @@ void print_opcodes(char *start, int size)
 	}
 }
 
-/*
+/**
  * main - prints the opcodes of its own main function.
  * @argc: size of argv
  * @argv: command line arguments
