@@ -28,8 +28,8 @@ void print_opcodes(char *start, int size) {
  * If the number of bytes is negative, print Error, followed by a new line,
  * and exit with the status 2
  */
-int main(int argc, char **argv) {
-
+int main(int argc, char **argv)
+{
 	if (argc != 2)
 	{
 		printf("Error\n");
