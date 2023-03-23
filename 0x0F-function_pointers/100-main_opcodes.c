@@ -3,8 +3,8 @@
 
 /**
  * print_opcodes - prints the opcodes of its own main function.
- * @start - string pointer
- * @size -size
+ * @start: string pointer
+ * @size: size
  *
  * Return: void
  */
