@@ -14,7 +14,7 @@ void print_opcodes(char *start, int size) {
 	for (; i < size; i++)
 	{
 		printf("%02hhx", start[i]);
-		(i == size - 1) ? printf("\n") : void (0);
+		(i == size - 1) ? printf("\n") : printf("");
 	}
 }
 
