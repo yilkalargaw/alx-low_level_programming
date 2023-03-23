@@ -8,7 +8,8 @@
  *
  * Return: void
  */
-void print_opcodes(char *start, int size) {
+void print_opcodes(char *start, int size)
+{
 	int i = 0;
 
 	for (; i < size; i++)
