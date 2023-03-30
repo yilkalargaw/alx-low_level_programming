@@ -7,7 +7,6 @@
  *
  * Return: address of new element || NULL
  */
-
 list_t *add_node(list_t **head, const char *str)
 {
 	char *tmp = strdup(str);
