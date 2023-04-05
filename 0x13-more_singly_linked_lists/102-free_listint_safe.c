@@ -8,7 +8,7 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	const size_t l_size = 0;
+	size_t l_size = 0;
 	listint_t *temp;
 
 	for (; *h != NULL; temp = (*h)->next, free(*h), *h = temp)
