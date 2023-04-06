@@ -11,12 +11,14 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *current;
 	size_t l_size = 0;
 
-	for (; head != NULL; l_size++)
+	while (head != NULL)
 	{
 		current = head;
 		head = head->next;
 
 		printf("[%p] %d\n", (void *)current, current->n);
+		l_size++;
+
 		if (current <= head)
 			break;
 	}
