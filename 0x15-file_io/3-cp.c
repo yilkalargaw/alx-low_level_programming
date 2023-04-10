@@ -1,6 +1,9 @@
-#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include <stdlib.h>
-#include "main.h"
+#include <errno.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
  * main - copies contents of a file
@@ -12,6 +15,8 @@
 int main(int argc, char **argv)
 {
 	int fd1, fd2;
+	char buffer[1024];
+	ssize_t r;
 
 	if (argc != 3)
 	{
@@ -35,5 +40,25 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
-	return ((argc && argv[0]) ? 0 : 1);
+	while ((r = read(fd1, buffer, 1024)) > 0)
+	{
+		if (write(fd2, buffer, r) != r)
+		{
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			exit(1);
+		}
+	}
+
+	if (r == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		exit(1);
+	}
+
+	if (close(fd1) == -1 || close(fd2) == -1) {
+		dprintf(2, "Error: Can't close fd %s\n", strerror(errno));
+		exit(1);
+	}
+
+	return (0);
 }
