@@ -13,8 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd; /* file discriptor most examples use this variable */
 	char *buffer; /* string buffer */
 
-	bool check = (!filename ||
-				  (fd = open(filename, O_RDONLY)) == -1 ||
+	bool check = (!filename || (fd = open(filename, O_RDONLY)) == -1 ||
 				  !(buffer = malloc(sizeof(char) * letters))) ? false : true;
 
 	if (check != true)
