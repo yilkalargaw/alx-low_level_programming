@@ -26,8 +26,8 @@ int _strlen(char *s)
  */
 int create_file(const char *filename, char *text_content)
 {
-	/* ssize_t w; /\* r,  /\\* read and write sizes *\\/ *\/ */
-	int fd, w; /* file discriptor most examples use this variable */
+	ssize_t w; /* r,  /\* read and write sizes *\/ */
+	int fd; /* file discriptor most examples use this variable */
 
 	bool check = (!filename ||
 				  (fd = open(filename,
