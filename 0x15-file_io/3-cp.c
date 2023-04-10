@@ -3,9 +3,9 @@
  * @argc: Number of arguments passed
  * @argv: Array of pointers to arguments
  *
- * Return: Always 0 (Success)
+ * Return: 0 on sucess
  */
 int main(int argc, char **argv)
 {
-	return (0);
+	return ((argc && argv[0]) ? 0 : 1);
 }
