@@ -4,6 +4,23 @@
 #include <errno.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdarg.h>
+
+/**
+ * USAGE_ERROR - prints an error message and exits
+ * @fd: file descriptor
+ * @fmt: format string
+ * Return: void
+ */
+void USAGE_ERROR(int fd, const char *fmt, ...)
+{
+	va_list args;
+
+	va_start(args, fmt);
+	vdprintf(fd, fmt, args);
+	va_end(args);
+	exit(1);
+}
 
 /**
  * main - copies contents of a file
@@ -19,46 +36,29 @@ int main(int argc, char **argv)
 	ssize_t r;
 
 	if (argc != 3)
-	{
-		dprintf(2, "Usage: %s filename text\n", argv[0]);
-		exit(1);
-	}
+		USAGE_ERROR(2, "Usage: %s filename text\n", argv[0]);
 
 	fd1 = open(argv[1], O_RDONLY);
 
 	if (fd1 == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(1);
-	}
+		USAGE_ERROR(2, "Error: Can't read from file %s\n", argv[1]);
 
 	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	if (fd2 == -1)
-	{
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
-		exit(1);
-	}
+		USAGE_ERROR(2, "Error: Can't write to %s\n", argv[2]);
 
 	while ((r = read(fd1, buffer, 1024)) > 0)
 	{
 		if (write(fd2, buffer, r) != r)
-		{
-			dprintf(2, "Error: Can't write to %s\n", argv[2]);
-			exit(1);
-		}
+			USAGE_ERROR(2, "Error: Can't write to %s\n", argv[2]);
 	}
 
 	if (r == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(1);
-	}
+		USAGE_ERROR(2, "Error: Can't read from file %s\n", argv[1]);
 
-	if (close(fd1) == -1 || close(fd2) == -1) {
-		dprintf(2, "Error: Can't close fd %s\n", strerror(errno));
-		exit(1);
-	}
+	if (close(fd1) == -1 || close(fd2) == -1)
+		USAGE_ERROR(2, "Error: Can't close fd %s\n", strerror(errno));
 
 	return (0);
 }
