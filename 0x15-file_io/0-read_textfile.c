@@ -9,7 +9,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t r, w; /* read and write sizes */
+	ssize_t w; /* r,  /\* read and write sizes *\/ */
 	int fd; /* file discriptor most examples use this variable */
 	char *buffer; /* string buffer */
 
@@ -19,8 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (check != true)
 		return (0);
 
-	r = read(fd, buffer, letters);
-	w = write(STDOUT_FILENO, buffer, r);
+	w = write(STDOUT_FILENO, buffer, read(fd, buffer, letters));
 
 	close(fd);
 	free(buffer);
