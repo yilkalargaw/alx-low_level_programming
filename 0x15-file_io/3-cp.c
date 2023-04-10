@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 
 	if (fd1 == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(1);
 	}
 
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 
 	if (fd2 == -1)
 	{
-		dprintf(2, "Error: Can't write to %s", argv[2]);
+		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(1);
 	}
 
