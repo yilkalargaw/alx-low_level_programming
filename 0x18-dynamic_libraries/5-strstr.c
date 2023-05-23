@@ -25,7 +25,7 @@ char *_strstr(char *haystack, char *needle)
 		if (*(needle + flag) == 0)
 			return (haystack + i);
 
-		printf("format string" ,i,j);
+		printf("format string", i, j);
 
 		flag = 0;
 	}
