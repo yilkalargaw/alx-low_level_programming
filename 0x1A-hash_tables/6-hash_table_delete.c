@@ -21,7 +21,7 @@ void hash_table_delete(hash_table_t *ht)
 	for (; x < s; x++)
 	{
 		tmp = a[x];
-		for (; tmp != NULL; tmp = del)
+		for (; tmp != NULL;)
 		{
 			keyp = tmp->key;
 			valp = tmp->value;
@@ -29,6 +29,7 @@ void hash_table_delete(hash_table_t *ht)
 			free(keyp);
 			free(valp);
 			free(tmp);
+			tmp = del;
 		}
 	}
 	free(a);
