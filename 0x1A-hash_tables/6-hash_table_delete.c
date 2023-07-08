@@ -6,32 +6,27 @@
  *
  * Return: Nothing.
  */
-void hash_table_delete(hash_table_t *ht)
-{
-	hash_node_t **a, *tmp, *del;
-	char *keyp, *valp;
-	unsigned long int s, x = 0;
+void hash_table_delete(hash_table_t *ht) {
+	hash_node_t *current_node;
+	hash_node_t *next_node;
+	unsigned long int i;
 
 	if (ht == NULL)
 		return;
 
-	a = ht->array;
-	s = ht->size;
 
-	for (; x < s; x++)
-	{
-		tmp = a[x];
-		for (; tmp != NULL;)
+	for (i = 0; i < ht->size; i++)
 		{
-			keyp = tmp->key;
-			valp = tmp->value;
-			del = tmp->next;
-			free(keyp);
-			free(valp);
-			free(tmp);
-			tmp = del;
+			current_node = ht->array[i];
+			for (; current_node != NULL; current_node = next_node)
+				{
+					next_node = current_node->next;
+					free(current_node->key);
+					free(current_node->value);
+					free(current_node);
+				}
 		}
-	}
-	free(a);
+
+	free(ht->array);
 	free(ht);
 }
