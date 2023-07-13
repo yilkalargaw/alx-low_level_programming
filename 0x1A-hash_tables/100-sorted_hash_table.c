@@ -59,19 +59,19 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
  * @key: key
  * Return: value at key, NULL otherwise
  */
-char *shash_table_get(const shash_table_t *ht, const char *key)
-{
-	hash_node_t *node;
-	unsigned long int index;
+/* char *shash_table_get(const shash_table_t *ht, const char *key) */
+/* { */
+/* 	hash_node_t *node; */
+/* 	unsigned long int index; */
 
-	index = key_index((unsigned const char *)key, ht->size);
-	node = ht->array[index];
-	while (node != NULL)
-	{
-		if (strcmp(node->key, key) == 0)
-			return (node->value);
-		node = node->next;
-	}
+/* 	index = key_index((unsigned const char *)key, ht->size); */
+/* 	node = ht->array[index]; */
+/* 	while (node != NULL) */
+/* 	{ */
+/* 		if (strcmp(node->key, key) == 0) */
+/* 			return (node->value); */
+/* 		node = node->next; */
+/* 	} */
 
-	return (NULL);
-}
+/* 	return (NULL); */
+/* } */
