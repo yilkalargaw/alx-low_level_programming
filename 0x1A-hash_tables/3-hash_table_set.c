@@ -4,8 +4,8 @@
  * hash_table_set - Add element to the hashtable
  *
  * @ht: hash-table you want to add or update the key/value to
- * @key:  key.
- * @value:  value associated with the key.
+ * @key: key.
+ * @value: value associated with the key.
  *
  * Return: 1 if it succeeded, 0 otherwise
  */
@@ -35,7 +35,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
+	{
+		free(tmp_key);
+		free(tmp_value);
 		return (0);
+	}
 
 	node->key = tmp_key;
 	node->value = strdup(tmp_value);
