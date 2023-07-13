@@ -36,7 +36,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	unsigned long int tbl = hash_function(key);
 	shash_node_t *node = ht->array[tbl];
 
-	for (; node != NULL; node = node->next;)
+	for (; node != NULL; node = node->next)
 	{
 		if (strcmp(node->key, key) == 0)
 		{
@@ -53,6 +53,25 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	return (0);
 }
 
+char *shash_table_get(const shash_table_t *ht, const char *key)
+{
+	hash_node_t *node;
+	unsigned long int index;
+
+	index = key_index((unsigned const char *)key, ht->size);
+	node = ht->array[index];
+	while (node != NULL)
+	{
+		if (strcmp(node->key, key) == 0)
+		{
+			return node->value;
+		}
+		node = node->next;
+	}
+
+	return NULL;
+}
+
 /**
  * shash_table_get - gets value associated with a hash-table key
  * @ht: hash-table pointer
@@ -61,59 +80,17 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
  */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
-	unsigned long int tbl = hash_function(key);
-	shash_node_t *node = ht->array[tbl];
-	char* tmp= "hello";
+	hash_node_t *node;
+	unsigned long int index;
 
-	tbl++;
-	node++;
+	index = key_index((unsigned const char *)key, ht->size);
+	node = ht->array[index];
+	while (node != NULL)
+	{
+		if (strcmp(node->key, key) == 0)
+			return (node->value);
+		node = node->next;
+	}
 
-	return(tmp);
-}
-
-/**
- * shash_table_print - print function for a hash table.
- * @ht: The hash table to be printed
- *
- * Return: Nothing.
- */
-void shash_table_print(const shash_table_t *ht)
-{
-	unsigned long int tbl = hash_function(key);
-	shash_node_t *node = ht->array[tbl];
-
-	tbl++;
-	node++;
-}
-
-/**
- * hash_table_print_rev - print function for a hash table.
- * @ht: The hash table to be printed
- *
- * Return: Nothing.
- */
-void shash_table_print_rev(const shash_table_t *ht)
-{
-	unsigned long int tbl = hash_function(key);
-	shash_node_t *node = ht->array[tbl];
-
-	tbl++;
-	node++;
-
-}
-
-/**
- * shash_table_delete - function for deleting a hash table.
- * @ht: pointer to hash table to be deleted.
- *
- * Return: Nothing.
- */
-void shash_table_delete(shash_table_t *ht)
-{
-	unsigned long int tbl = hash_function(key);
-	shash_node_t *node = ht->array[tbl];
-
-	tbl++;
-	node++;
-
+	return (NULL);
 }
