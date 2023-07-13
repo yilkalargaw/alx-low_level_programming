@@ -31,7 +31,8 @@ shash_table_t *shash_table_create(unsigned long int size)
  *
  * Return: 1 if it succeeded, 0 otherwise
  */
-int shash_table_set(shash_table_t *ht, const char *key, const char *value) {
+int shash_table_set(shash_table_t *ht, const char *key, const char *value)
+{
 	unsigned long int tbl = hash_function(key);
 	shash_node_t *node = ht->array[tbl];
 
@@ -39,7 +40,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value) {
 	{
 		if (strcmp(node->key, key) == 0)
 		{
-			// The key already exists, update the value.
 			node->value = value;
 			return (1);
 		}
