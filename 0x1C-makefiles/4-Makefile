@@ -3,7 +3,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
-REMOVE = rm -rf
+RM = rm -rf
 
 all: mainish
 
@@ -11,10 +11,10 @@ mainish: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	$(REMOVE) *~ $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
-	$(REMOVE) $(OBJ)
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
